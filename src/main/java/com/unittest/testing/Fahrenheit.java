@@ -2,7 +2,8 @@ package com.unittest.testing;
 
 public class Fahrenheit {
 	private double celcius;
-	
+	private double fahnrenhiet;
+
 	public double getCelcius() {
 		return celcius;
 	}
@@ -11,6 +12,12 @@ public class Fahrenheit {
 		this.celcius = celcius;
 	}
 	
+	
+	public double getFahnrenhiet() {
+		return fahnrenhiet;
+	}
+
+
 	public boolean isBound(double celcius) {
 		boolean isResult;
 		if(celcius >= -1000 && celcius <= 1000) {
@@ -20,4 +27,15 @@ public class Fahrenheit {
 		}
 		return isResult;
 	}
+	
+	public void calculate() {
+		this.fahnrenhiet = this.celcius*9/5+32;
+	}
+
+	public String toString() {
+		double fahnrenhiet = this.getFahnrenhiet();
+		double celcius = this.getCelcius();
+		return Math.round(celcius)+" celcius = "+String.format("%.2f",fahnrenhiet)+" fahrenheit";
+	}
+	
 }
